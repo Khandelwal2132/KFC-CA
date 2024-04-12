@@ -9,7 +9,7 @@ jobs:
      - name: Checkout repository
        uses: actions/checkout@v2
      - name: Unzip Folder
-       run: unzip ../kfc.zip
+       run: unzip kfc.zip
      - name: Commit and Push Changes
        run: |
          git config --local user.email "action@github.com"
