@@ -8,7 +8,7 @@ jobs:
    steps:
      - name: Checkout repository
        uses: actions/checkout@v2
-     - name: Unzip Folder
+     - name: Unzip kfc
        run: unzip kfc.zip
      - name: Commit and Push Changes
        run: |
