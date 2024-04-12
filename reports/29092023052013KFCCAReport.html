@@ -1,0 +1,3511 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<link href='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>ExtentReports</title>
+
+	<style type='text/css'>
+		/* json-tree */
+		.jstBracket,.jstComma,.jstValue{white-space:pre-wrap}.jstValue{font-size:10px;font-weight:400;font-family:"Lucida Console",Monaco,monospace}.jstProperty{color:#666;word-wrap:break-word}.jstBool{color:#2525CC}.jstNum{color:#D036D0}.jstNull{color:gray}.jstStr{color:#2DB669}.jstFold:after{content:' -';cursor:pointer}.jstExpand{white-space:normal}.jstExpand:after{content:' +';cursor:pointer}.jstFolded{white-space:normal!important}.jstHiddenBlock{display:none}
+	</style>
+	
+	<script type="text/javascript">
+		/*! json-tree - v0.2.2 - 2017-09-25, MIT LICENSE */
+		var JSONTree=function(){var n={"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#x27;","/":"&#x2F;"},t=0,r=0;this.create=function(n,t){return r+=1,N(u(n,0,!1),{class:"jstValue"})};var e=function(t){return t.replace(/[&<>'"]/g,function(t){return n[t]})},s=function(){return r+"_"+t++},u=function(n,t,r){if(null===n)return f(r?t:0);switch(typeof n){case"boolean":return l(n,r?t:0);case"number":return i(n,r?t:0);case"string":return o(n,r?t:0);default:return n instanceof Array?a(n,t,r):c(n,t,r)}},c=function(n,t,r){var e=s(),u=Object.keys(n).map(function(r){return j(r,n[r],t+1,!0)}).join(m()),c=[g("{",r?t:0,e),N(u,{id:e}),p("}",t)].join("\n");return N(c,{})},a=function(n,t,r){var e=s(),c=n.map(function(n){return u(n,t+1,!0)}).join(m());return[g("[",r?t:0,e),N(c,{id:e}),p("]",t)].join("\n")},o=function(n,t){var r=e(JSON.stringify(n));return N(v(r,t),{class:"jstStr"})},i=function(n,t){return N(v(n,t),{class:"jstNum"})},l=function(n,t){return N(v(n,t),{class:"jstBool"})},f=function(n){return N(v("null",n),{class:"jstNull"})},j=function(n,t,r){var s=v(e(JSON.stringify(n))+": ",r),c=N(u(t,r,!1),{});return N(s+c,{class:"jstProperty"})},m=function(){return N(",\n",{class:"jstComma"})},N=function(n,t){return d("span",t,n)},d=function(n,t,r){return"<"+n+Object.keys(t).map(function(n){return" "+n+'="'+t[n]+'"'}).join("")+">"+r+"</"+n+">"},g=function(n,t,r){return N(v(n,t),{class:"jstBracket"})+N("",{class:"jstFold",onclick:"JSONTree.toggle('"+r+"')"})};this.toggle=function(n){var t=document.getElementById(n),r=t.parentNode,e=t.previousElementSibling;""===t.className?(t.className="jstHiddenBlock",r.className="jstFolded",e.className="jstExpand"):(t.className="",r.className="",e.className="jstFold")};var p=function(n,t){return N(v(n,t),{})},v=function(n,t){return Array(2*t+1).join(" ")+n};return this}();
+	</script>
+</head>
+	<body class='extent dark default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo black"><img src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/d74480e/commons/img/logo.png"></a>
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
+			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+		</ul>
+		<!-- report name -->
+		<span class='report-name'>KFCCA_AutomationReport</span>
+		<!-- report headline -->
+		<span class='report-headline'></span>
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<a href='#!'>
+			<span class='label blue darken-3 suite-start-time'>Sep 29, 2023 05:20:13 PM</span>
+			</a>
+		</ul>
+	</div>
+</nav>		<!-- container -->
+		<div class='container'>
+<div id='test-view' class='view'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+				<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+			<!-- category toggle -->
+			<!-- category toggle -->
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+				<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+				<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+<div id='test-view-charts' class='subview-full'>
+    <div id='charts-row' class='row nm-v nm-h'>
+        <div class='col s12 m12 l12 np-h'>
+            <div class='card-panel nm-v'>
+                <div class='left panel-name'>Tests</div>
+                <div class='chart-box' style="max-height:94px;">
+                    <canvas id='parent-analysis' width='90' height='70'></canvas>
+                </div>
+                <div class='block text-small'>
+                    <span class='tooltipped' data-position='top' data-tooltip='98.305%'><span class='strong'>58</span> test(s) passed</span>
+                </div>
+                <div class='block text-small'>
+                    <span class='strong tooltipped' data-position='top' data-tooltip='1.695%'>1</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="timeline-chart" class="row nm-v nm-h">
+        <div class="col s12 m12 l12 np-h">
+            <div class="card-panel">
+                <div class='left panel-name'>Timeline (seconds)</div>
+                <div class="chart-box" style="width:98%;max-height:145px;">
+                    <canvas id="timeline" height="120"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='test-collection' class='test-collection'>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidateRegisteredUser_Delivery_Future_Ordering_ByCash</span>
+						<span class='test-time'>Sep 29, 2023 05:20:23 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 05:20:23 PM</span>
+	<span class='label end-time'>Sep 29, 2023 05:21:13 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 49s+799ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:20:32 PM</td>
+				<td class='step-details'>
+						User Logged in successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052031.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052031.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052031.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:20:47 PM</td>
+				<td class='step-details'>
+						store selected successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052042.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052042.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052042.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:21:08 PM</td>
+				<td class='step-details'>
+						Future date Selected successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052106.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052106.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052106.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:21:10 PM</td>
+				<td class='step-details'>
+						Items added to cart successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052110.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052110.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052110.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:21:13 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateRegisteredUser_Delivery_Future_Ordering_ByCash.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateRegisteredUser_Delivery_Future_Ordering_ByCash.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateRegisteredUser_Delivery_Future_Ordering_ByCash.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidateInvalid_Coupon</span>
+						<span class='test-time'>Sep 29, 2023 05:21:22 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 05:21:22 PM</span>
+	<span class='label end-time'>Sep 29, 2023 05:21:51 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 29s+348ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:21:28 PM</td>
+				<td class='step-details'>
+						store selected successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052127.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052127.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052127.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:21:35 PM</td>
+				<td class='step-details'>
+						Items added to cart successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052135.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052135.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052135.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:21:51 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateInvalid_Coupon.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateInvalid_Coupon.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateInvalid_Coupon.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>ClickPreviousOrder</span>
+						<span class='test-time'>Sep 29, 2023 05:21:59 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 05:21:59 PM</span>
+	<span class='label end-time'>Sep 29, 2023 05:22:27 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 27s+336ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:22:07 PM</td>
+				<td class='step-details'>
+						User Logged in successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052207.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052207.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052207.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:22:27 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ClickPreviousOrder.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ClickPreviousOrder.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ClickPreviousOrder.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidateCoupons_Above_10</span>
+						<span class='test-time'>Sep 29, 2023 05:22:35 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 05:22:35 PM</span>
+	<span class='label end-time'>Sep 29, 2023 05:23:11 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 35s+440ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:22:43 PM</td>
+				<td class='step-details'>
+						store selected successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052243.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052243.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052243.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:22:54 PM</td>
+				<td class='step-details'>
+						Items added to cart successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052254.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052254.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052254.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:23:11 PM</td>
+				<td class='step-details'>
+						Coupon applied successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052311.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052311.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052311.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:23:11 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateCoupons_Above_10.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateCoupons_Above_10.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateCoupons_Above_10.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidatePlusAndMinusInCartPageTest</span>
+						<span class='test-time'>Sep 29, 2023 05:23:19 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 05:23:19 PM</span>
+	<span class='label end-time'>Sep 29, 2023 05:24:34 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 14s+300ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:23:27 PM</td>
+				<td class='step-details'>
+						User Logged in successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052327.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052327.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052327.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:23:39 PM</td>
+				<td class='step-details'>
+						store selected successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052339.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052339.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052339.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:24:21 PM</td>
+				<td class='step-details'>
+						Item quantity increased successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052421.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052421.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052421.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:24:30 PM</td>
+				<td class='step-details'>
+						Item quantity Decreased successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052430.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052430.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052430.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:24:34 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidatePlusAndMinusInCartPageTest.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidatePlusAndMinusInCartPageTest.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidatePlusAndMinusInCartPageTest.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='6'>
+					<div class='test-heading'>
+						<span class='test-name'>validateLoginInvalidIdandPass</span>
+						<span class='test-time'>Sep 29, 2023 05:24:43 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 05:24:43 PM</span>
+	<span class='label end-time'>Sep 29, 2023 05:24:55 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 11s+743ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:24:55 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\validateLoginInvalidIdandPass.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\validateLoginInvalidIdandPass.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\validateLoginInvalidIdandPass.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='7'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidateBehindTheBucket_ByGuestUser</span>
+						<span class='test-time'>Sep 29, 2023 05:25:04 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 05:25:04 PM</span>
+	<span class='label end-time'>Sep 29, 2023 05:25:13 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 8s+731ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:25:13 PM</td>
+				<td class='step-details'>
+						Behind the Bucket Validation successfull
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052512.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052512.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052512.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:25:13 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateBehindTheBucket_ByGuestUser.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateBehindTheBucket_ByGuestUser.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateBehindTheBucket_ByGuestUser.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='8'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidateCoupons</span>
+						<span class='test-time'>Sep 29, 2023 05:25:21 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 05:25:21 PM</span>
+	<span class='label end-time'>Sep 29, 2023 05:26:01 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 39s+571ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:25:32 PM</td>
+				<td class='step-details'>
+						store selected successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052529.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052529.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052529.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:25:48 PM</td>
+				<td class='step-details'>
+						Items added to cart successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052547.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052547.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052547.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:26:01 PM</td>
+				<td class='step-details'>
+						Coupon applied successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052601.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052601.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052601.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:26:01 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateCoupons.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateCoupons.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateCoupons.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='9'>
+					<div class='test-heading'>
+						<span class='test-name'>ClicksavedAddesses</span>
+						<span class='test-time'>Sep 29, 2023 05:26:12 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 05:26:12 PM</span>
+	<span class='label end-time'>Sep 29, 2023 05:26:26 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 13s+505ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:26:22 PM</td>
+				<td class='step-details'>
+						User Logged in successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052621.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052621.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052621.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:26:26 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ClicksavedAddesses.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ClicksavedAddesses.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ClicksavedAddesses.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='10'>
+					<div class='test-heading'>
+						<span class='test-name'>Validate_GuestUser_Delivery_AddMoreFood_Button</span>
+						<span class='test-time'>Sep 29, 2023 05:26:36 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 05:26:36 PM</span>
+	<span class='label end-time'>Sep 29, 2023 05:27:02 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 25s+382ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:26:45 PM</td>
+				<td class='step-details'>
+						store selected successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052644.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052644.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052644.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:26:56 PM</td>
+				<td class='step-details'>
+						Items added to cart successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052656.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052656.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052656.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:27:02 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\Validate_GuestUser_Delivery_AddMoreFood_Button.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\Validate_GuestUser_Delivery_AddMoreFood_Button.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\Validate_GuestUser_Delivery_AddMoreFood_Button.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='11'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidateGuestUserDeliveryStoreSelection</span>
+						<span class='test-time'>Sep 29, 2023 05:27:17 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 05:27:17 PM</span>
+	<span class='label end-time'>Sep 29, 2023 05:27:39 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 22s+376ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='fail'>
+				<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+				<td class='timestamp'>5:27:39 PM</td>
+				<td class='step-details'>
+						<textarea disabled class="code-block">org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=115.0.5790.99)
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [34780280e8e44212d78639549f13d388, clickElement {id=81315A50639ECBF3104E915675DB522E_element_46}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.99, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\windows\SystemTemp\scope...}, goog:chromeOptions: {debuggerAddress: localhost:51573}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51573/devtoo..., se:cdpVersion: 115.0.5790.99, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (34780280e8e44212d78639549f13d388)] -> css selector: input#delivery-submit]
+Session ID: 34780280e8e44212d78639549f13d388
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at jdk.internal.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
+	at pages.HomePage.SelectDeliveryLocation(HomePage.java:205)
+	at testcases.GuestUserDeliveryStoreSelection.ValidateGuestUserDeliveryStoreSelection(GuestUserDeliveryStoreSelection.java:9)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:324)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:74)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:123)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+</textarea>
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateGuestUserDeliveryStoreSelection.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateGuestUserDeliveryStoreSelection.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateGuestUserDeliveryStoreSelection.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='12'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidateBehindTheBucket_ByRegisteredUser</span>
+						<span class='test-time'>Sep 29, 2023 05:27:49 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 05:27:49 PM</span>
+	<span class='label end-time'>Sep 29, 2023 05:28:07 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 18s+65ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:27:58 PM</td>
+				<td class='step-details'>
+						User Logged in successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052757.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052757.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052757.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:28:07 PM</td>
+				<td class='step-details'>
+						Behind the Bucket Validation successfull
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052806.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052806.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052806.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:28:07 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateBehindTheBucket_ByRegisteredUser.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateBehindTheBucket_ByRegisteredUser.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateBehindTheBucket_ByRegisteredUser.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='13'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidateRegisteredUserPickupStoreSelection</span>
+						<span class='test-time'>Sep 29, 2023 05:28:15 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 05:28:15 PM</span>
+	<span class='label end-time'>Sep 29, 2023 05:28:50 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 35s+126ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:28:40 PM</td>
+				<td class='step-details'>
+						User Logged in successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052839.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052839.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052839.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:28:50 PM</td>
+				<td class='step-details'>
+						store selected successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052850.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052850.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052850.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:28:50 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateRegisteredUserPickupStoreSelection.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateRegisteredUserPickupStoreSelection.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateRegisteredUserPickupStoreSelection.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='14'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidateRegisteredUserDelivery_ByCard</span>
+						<span class='test-time'>Sep 29, 2023 05:29:00 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 05:29:00 PM</span>
+	<span class='label end-time'>Sep 29, 2023 05:29:36 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 36s+145ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:29:09 PM</td>
+				<td class='step-details'>
+						User Logged in successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052908.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052908.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052908.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:29:19 PM</td>
+				<td class='step-details'>
+						store selected successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052919.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052919.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052919.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:29:32 PM</td>
+				<td class='step-details'>
+						Items added to cart successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052932.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052932.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052932.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:29:36 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateRegisteredUserDelivery_ByCard.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateRegisteredUserDelivery_ByCard.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateRegisteredUserDelivery_ByCard.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='15'>
+					<div class='test-heading'>
+						<span class='test-name'>Validate_RegisteredUser_Delivery_AddMoreFood_Button</span>
+						<span class='test-time'>Sep 29, 2023 05:29:44 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 05:29:44 PM</span>
+	<span class='label end-time'>Sep 29, 2023 05:30:23 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 38s+480ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:29:53 PM</td>
+				<td class='step-details'>
+						User Logged in successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052952.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052952.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023052952.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:30:03 PM</td>
+				<td class='step-details'>
+						store selected successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053003.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053003.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053003.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:30:18 PM</td>
+				<td class='step-details'>
+						Items added to cart successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053017.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053017.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053017.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:30:23 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\Validate_RegisteredUser_Delivery_AddMoreFood_Button.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\Validate_RegisteredUser_Delivery_AddMoreFood_Button.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\Validate_RegisteredUser_Delivery_AddMoreFood_Button.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='16'>
+					<div class='test-heading'>
+						<span class='test-name'>ClickDeleteAccount</span>
+						<span class='test-time'>Sep 29, 2023 05:30:31 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 05:30:31 PM</span>
+	<span class='label end-time'>Sep 29, 2023 05:30:44 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 12s+884ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:30:39 PM</td>
+				<td class='step-details'>
+						User Logged in successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053038.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053038.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053038.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:30:44 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ClickDeleteAccount.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ClickDeleteAccount.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ClickDeleteAccount.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='17'>
+					<div class='test-heading'>
+						<span class='test-name'>validateForgetYourPassword</span>
+						<span class='test-time'>Sep 29, 2023 05:30:52 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 05:30:52 PM</span>
+	<span class='label end-time'>Sep 29, 2023 05:31:03 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 11s+692ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:30:52 PM</td>
+				<td class='step-details'>
+						Authonticated successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053052.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053052.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053052.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:31:03 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\validateForgetYourPassword.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\validateForgetYourPassword.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\validateForgetYourPassword.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='18'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidateRegisteredUser_Pickup_Future_Ordering_ByCard</span>
+						<span class='test-time'>Sep 29, 2023 05:31:12 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 05:31:12 PM</span>
+	<span class='label end-time'>Sep 29, 2023 05:31:54 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 41s+804ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:31:21 PM</td>
+				<td class='step-details'>
+						User Logged in successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053120.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053120.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053120.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:31:33 PM</td>
+				<td class='step-details'>
+						store selected successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053133.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053133.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053133.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:31:49 PM</td>
+				<td class='step-details'>
+						Future date Selected successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053146.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053146.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053146.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:31:51 PM</td>
+				<td class='step-details'>
+						Items added to cart successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053151.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053151.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053151.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:31:54 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateRegisteredUser_Pickup_Future_Ordering_ByCard.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateRegisteredUser_Pickup_Future_Ordering_ByCard.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateRegisteredUser_Pickup_Future_Ordering_ByCard.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='19'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidateCheckoutTest</span>
+						<span class='test-time'>Sep 29, 2023 05:32:02 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 05:32:02 PM</span>
+	<span class='label end-time'>Sep 29, 2023 05:32:37 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 34s+930ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:32:10 PM</td>
+				<td class='step-details'>
+						User Logged in successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053210.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053210.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053210.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:32:22 PM</td>
+				<td class='step-details'>
+						store selected successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053222.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053222.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053222.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:32:36 PM</td>
+				<td class='step-details'>
+						Items added to cart successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053236.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053236.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053236.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:32:37 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateCheckoutTest.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateCheckoutTest.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateCheckoutTest.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='20'>
+					<div class='test-heading'>
+						<span class='test-name'>ClickfavouriteItems</span>
+						<span class='test-time'>Sep 29, 2023 05:32:46 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 05:32:46 PM</span>
+	<span class='label end-time'>Sep 29, 2023 05:32:55 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 9s+394ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:32:54 PM</td>
+				<td class='step-details'>
+						User Logged in successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053253.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053253.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053253.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:32:55 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ClickfavouriteItems.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ClickfavouriteItems.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ClickfavouriteItems.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='21'>
+					<div class='test-heading'>
+						<span class='test-name'>EnterInValidCardDetails</span>
+						<span class='test-time'>Sep 29, 2023 05:33:05 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 05:33:05 PM</span>
+	<span class='label end-time'>Sep 29, 2023 05:33:22 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 17s+171ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:33:13 PM</td>
+				<td class='step-details'>
+						store selected successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053310.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053310.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053310.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:33:18 PM</td>
+				<td class='step-details'>
+						Items added to cart successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053317.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053317.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053317.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:33:22 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\EnterInValidCardDetails.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\EnterInValidCardDetails.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\EnterInValidCardDetails.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='22'>
+					<div class='test-heading'>
+						<span class='test-name'>validateLoginInvalidIdValidPass</span>
+						<span class='test-time'>Sep 29, 2023 05:33:30 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 05:33:30 PM</span>
+	<span class='label end-time'>Sep 29, 2023 05:33:42 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 11s+461ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:33:42 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\validateLoginInvalidIdValidPass.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\validateLoginInvalidIdValidPass.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\validateLoginInvalidIdValidPass.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='23'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidateGuest_User_Delivery_Future_Ordering_ByCash</span>
+						<span class='test-time'>Sep 29, 2023 05:33:49 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 05:33:49 PM</span>
+	<span class='label end-time'>Sep 29, 2023 05:34:11 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 21s+683ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:33:57 PM</td>
+				<td class='step-details'>
+						store selected successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053357.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053357.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053357.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:34:05 PM</td>
+				<td class='step-details'>
+						Future date Selected successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053402.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053402.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053402.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:34:08 PM</td>
+				<td class='step-details'>
+						Items added to cart successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053408.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053408.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053408.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:34:11 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateGuest_User_Delivery_Future_Ordering_ByCash.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateGuest_User_Delivery_Future_Ordering_ByCash.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateGuest_User_Delivery_Future_Ordering_ByCash.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='24'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidateHeaderlinks</span>
+						<span class='test-time'>Sep 29, 2023 05:34:19 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 05:34:19 PM</span>
+	<span class='label end-time'>Sep 29, 2023 05:36:06 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 47s+158ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:36:06 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateHeaderlinks.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateHeaderlinks.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateHeaderlinks.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='25'>
+					<div class='test-heading'>
+						<span class='test-name'>validateLoginValidIdInvalidPass</span>
+						<span class='test-time'>Sep 29, 2023 05:36:21 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 05:36:21 PM</span>
+	<span class='label end-time'>Sep 29, 2023 05:36:34 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 13s+335ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:36:34 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\validateLoginValidIdInvalidPass.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\validateLoginValidIdInvalidPass.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\validateLoginValidIdInvalidPass.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='26'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidateSignout</span>
+						<span class='test-time'>Sep 29, 2023 05:36:46 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 05:36:46 PM</span>
+	<span class='label end-time'>Sep 29, 2023 05:36:59 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 13s+460ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:36:54 PM</td>
+				<td class='step-details'>
+						User Logged in successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053653.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053653.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053653.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:36:59 PM</td>
+				<td class='step-details'>
+						Logged out successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053658.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053658.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053658.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:36:59 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateSignout.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateSignout.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateSignout.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='27'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidateRegistermail</span>
+						<span class='test-time'>Sep 29, 2023 05:37:09 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 05:37:09 PM</span>
+	<span class='label end-time'>Sep 29, 2023 05:37:19 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 10s+446ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:37:19 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateRegistermail.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateRegistermail.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateRegistermail.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='28'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidateHeaderLinksForRegisterUser</span>
+						<span class='test-time'>Sep 29, 2023 05:37:28 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 05:37:28 PM</span>
+	<span class='label end-time'>Sep 29, 2023 05:39:07 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 39s+350ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:37:37 PM</td>
+				<td class='step-details'>
+						User Logged in successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053736.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053736.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053736.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:39:07 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateHeaderLinksForRegisterUser.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateHeaderLinksForRegisterUser.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateHeaderLinksForRegisterUser.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='29'>
+					<div class='test-heading'>
+						<span class='test-name'>EnterInValidCardDetails</span>
+						<span class='test-time'>Sep 29, 2023 05:39:16 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 05:39:16 PM</span>
+	<span class='label end-time'>Sep 29, 2023 05:39:35 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 18s+160ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:39:22 PM</td>
+				<td class='step-details'>
+						store selected successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053921.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053921.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053921.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:39:30 PM</td>
+				<td class='step-details'>
+						Items added to cart successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053930.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053930.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053930.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:39:35 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\EnterInValidCardDetails.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\EnterInValidCardDetails.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\EnterInValidCardDetails.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='30'>
+					<div class='test-heading'>
+						<span class='test-name'>Click_SavedContactDetails</span>
+						<span class='test-time'>Sep 29, 2023 05:39:42 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 05:39:42 PM</span>
+	<span class='label end-time'>Sep 29, 2023 05:39:55 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 12s+731ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:39:51 PM</td>
+				<td class='step-details'>
+						User Logged in successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053950.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053950.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023053950.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:39:55 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\Click_SavedContactDetails.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\Click_SavedContactDetails.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\Click_SavedContactDetails.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='31'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidateGuestUserPickupStoreSelection</span>
+						<span class='test-time'>Sep 29, 2023 05:40:04 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 05:40:04 PM</span>
+	<span class='label end-time'>Sep 29, 2023 05:40:14 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 10s+530ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:40:14 PM</td>
+				<td class='step-details'>
+						store selected successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054014.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054014.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054014.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:40:14 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateGuestUserPickupStoreSelection.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateGuestUserPickupStoreSelection.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateGuestUserPickupStoreSelection.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='32'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidateRegisteredUserDelivery_ByCash</span>
+						<span class='test-time'>Sep 29, 2023 05:40:23 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 05:40:23 PM</span>
+	<span class='label end-time'>Sep 29, 2023 05:41:00 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 37s+729ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:40:31 PM</td>
+				<td class='step-details'>
+						User Logged in successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054031.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054031.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054031.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:40:41 PM</td>
+				<td class='step-details'>
+						store selected successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054041.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054041.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054041.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:40:58 PM</td>
+				<td class='step-details'>
+						Items added to cart successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054058.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054058.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054058.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:41:00 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateRegisteredUserDelivery_ByCash.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateRegisteredUserDelivery_ByCash.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateRegisteredUserDelivery_ByCash.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='33'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidateRegisteredUserPickup_ByCard</span>
+						<span class='test-time'>Sep 29, 2023 05:41:12 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 05:41:12 PM</span>
+	<span class='label end-time'>Sep 29, 2023 05:41:48 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 35s+928ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:41:20 PM</td>
+				<td class='step-details'>
+						User Logged in successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054120.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054120.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054120.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:41:32 PM</td>
+				<td class='step-details'>
+						store selected successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054132.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054132.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054132.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:41:47 PM</td>
+				<td class='step-details'>
+						Items added to cart successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054146.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054146.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054146.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:41:48 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateRegisteredUserPickup_ByCard.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateRegisteredUserPickup_ByCard.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateRegisteredUserPickup_ByCard.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='34'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidateGuest_User_Delivery_Future_Ordering_ByCard</span>
+						<span class='test-time'>Sep 29, 2023 05:41:57 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 05:41:57 PM</span>
+	<span class='label end-time'>Sep 29, 2023 05:42:19 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 21s+478ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:42:06 PM</td>
+				<td class='step-details'>
+						store selected successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054205.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054205.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054205.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:42:13 PM</td>
+				<td class='step-details'>
+						Future date Selected successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054211.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054211.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054211.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:42:15 PM</td>
+				<td class='step-details'>
+						Items added to cart successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054215.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054215.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054215.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:42:19 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateGuest_User_Delivery_Future_Ordering_ByCard.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateGuest_User_Delivery_Future_Ordering_ByCard.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateGuest_User_Delivery_Future_Ordering_ByCard.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='35'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidateFooterlinks</span>
+						<span class='test-time'>Sep 29, 2023 05:42:28 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 05:42:28 PM</span>
+	<span class='label end-time'>Sep 29, 2023 05:46:14 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 3m 46s+590ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:46:14 PM</td>
+				<td class='step-details'>
+						Validated all footer links successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054614.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054614.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054614.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:46:14 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateFooterlinks.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateFooterlinks.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateFooterlinks.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='36'>
+					<div class='test-heading'>
+						<span class='test-name'>Validate_Guest_User_PickUp_Future_Ordering_ByCash</span>
+						<span class='test-time'>Sep 29, 2023 05:46:25 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 05:46:25 PM</span>
+	<span class='label end-time'>Sep 29, 2023 05:46:59 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 33s+509ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:46:38 PM</td>
+				<td class='step-details'>
+						store selected successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054635.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054635.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054635.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:46:48 PM</td>
+				<td class='step-details'>
+						Future date Selected successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054643.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054643.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054643.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:46:54 PM</td>
+				<td class='step-details'>
+						Items added to cart successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054653.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054653.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054653.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:46:59 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\Validate_Guest_User_PickUp_Future_Ordering_ByCash.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\Validate_Guest_User_PickUp_Future_Ordering_ByCash.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\Validate_Guest_User_PickUp_Future_Ordering_ByCash.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='37'>
+					<div class='test-heading'>
+						<span class='test-name'>validateAccountLockout</span>
+						<span class='test-time'>Sep 29, 2023 05:47:12 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 05:47:12 PM</span>
+	<span class='label end-time'>Sep 29, 2023 05:47:50 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 37s+947ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:47:50 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\validateAccountLockout.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\validateAccountLockout.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\validateAccountLockout.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='38'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidateGuestUserDelivery_ByCard</span>
+						<span class='test-time'>Sep 29, 2023 05:48:01 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 05:48:01 PM</span>
+	<span class='label end-time'>Sep 29, 2023 05:48:34 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 32s+671ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:48:11 PM</td>
+				<td class='step-details'>
+						store selected successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054809.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054809.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054809.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:48:30 PM</td>
+				<td class='step-details'>
+						Items added to cart successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054829.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054829.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054829.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:48:34 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateGuestUserDelivery_ByCard.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateGuestUserDelivery_ByCard.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateGuestUserDelivery_ByCard.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='39'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidatePlusAndMinusInCartPageTest</span>
+						<span class='test-time'>Sep 29, 2023 05:48:44 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 05:48:44 PM</span>
+	<span class='label end-time'>Sep 29, 2023 05:50:01 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 17s+263ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:48:55 PM</td>
+				<td class='step-details'>
+						User Logged in successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054854.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054854.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054854.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:49:08 PM</td>
+				<td class='step-details'>
+						store selected successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054908.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054908.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054908.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:49:49 PM</td>
+				<td class='step-details'>
+						Item quantity increased successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054949.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054949.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054949.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:49:58 PM</td>
+				<td class='step-details'>
+						Item quantity Decreased successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054958.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054958.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023054958.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:50:01 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidatePlusAndMinusInCartPageTest.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidatePlusAndMinusInCartPageTest.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidatePlusAndMinusInCartPageTest.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='40'>
+					<div class='test-heading'>
+						<span class='test-name'>Click_ResetPswd</span>
+						<span class='test-time'>Sep 29, 2023 05:50:12 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 05:50:12 PM</span>
+	<span class='label end-time'>Sep 29, 2023 05:50:33 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 20s+420ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:50:25 PM</td>
+				<td class='step-details'>
+						User Logged in successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023055023.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023055023.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023055023.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:50:33 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\Click_ResetPswd.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\Click_ResetPswd.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\Click_ResetPswd.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='41'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidateGuestUserPickup_ByCash</span>
+						<span class='test-time'>Sep 29, 2023 05:50:44 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 05:50:44 PM</span>
+	<span class='label end-time'>Sep 29, 2023 05:51:03 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 18s+410ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:50:51 PM</td>
+				<td class='step-details'>
+						store selected successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023055050.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023055050.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023055050.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:50:58 PM</td>
+				<td class='step-details'>
+						Items added to cart successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023055058.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023055058.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023055058.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:51:03 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateGuestUserPickup_ByCash.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateGuestUserPickup_ByCash.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateGuestUserPickup_ByCash.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='42'>
+					<div class='test-heading'>
+						<span class='test-name'>Click_PaymentDetails</span>
+						<span class='test-time'>Sep 29, 2023 05:51:14 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 05:51:14 PM</span>
+	<span class='label end-time'>Sep 29, 2023 05:51:38 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 23s+968ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:51:26 PM</td>
+				<td class='step-details'>
+						User Logged in successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023055124.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023055124.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023055124.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:51:38 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\Click_PaymentDetails.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\Click_PaymentDetails.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\Click_PaymentDetails.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='43'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidateFooterlinks</span>
+						<span class='test-time'>Sep 29, 2023 05:51:52 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 05:51:52 PM</span>
+	<span class='label end-time'>Sep 29, 2023 05:56:27 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 4m 35s+175ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:52:06 PM</td>
+				<td class='step-details'>
+						User Logged in successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023055204.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023055204.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023055204.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:56:27 PM</td>
+				<td class='step-details'>
+						Validated all footer links successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023055626.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023055626.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023055626.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:56:27 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateFooterlinks.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateFooterlinks.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateFooterlinks.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='44'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidateRegisteredUserPickup_ByCash</span>
+						<span class='test-time'>Sep 29, 2023 05:56:38 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 05:56:38 PM</span>
+	<span class='label end-time'>Sep 29, 2023 05:57:33 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 54s+439ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:56:50 PM</td>
+				<td class='step-details'>
+						User Logged in successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023055649.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023055649.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023055649.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:57:06 PM</td>
+				<td class='step-details'>
+						store selected successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023055703.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023055703.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023055703.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:57:31 PM</td>
+				<td class='step-details'>
+						Items added to cart successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023055731.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023055731.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023055731.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:57:33 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateRegisteredUserPickup_ByCash.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateRegisteredUserPickup_ByCash.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateRegisteredUserPickup_ByCash.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='45'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidateRegistermail</span>
+						<span class='test-time'>Sep 29, 2023 05:57:45 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 05:57:45 PM</span>
+	<span class='label end-time'>Sep 29, 2023 05:57:58 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 13s+164ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:57:58 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateRegistermail.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateRegistermail.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateRegistermail.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='46'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidateNonRegisteredmail</span>
+						<span class='test-time'>Sep 29, 2023 05:58:09 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 05:58:09 PM</span>
+	<span class='label end-time'>Sep 29, 2023 05:58:23 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 14s+17ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:58:23 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateNonRegisteredmail.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateNonRegisteredmail.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateNonRegisteredmail.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='47'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidateFindAKFC</span>
+						<span class='test-time'>Sep 29, 2023 05:58:34 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 05:58:34 PM</span>
+	<span class='label end-time'>Sep 29, 2023 05:58:44 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 9s+233ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:58:44 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateFindAKFC.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateFindAKFC.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateFindAKFC.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='48'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidateGuestUser_Pickup_AddMoreFood_Button</span>
+						<span class='test-time'>Sep 29, 2023 05:58:59 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 05:58:59 PM</span>
+	<span class='label end-time'>Sep 29, 2023 05:59:20 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 21s+881ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:59:05 PM</td>
+				<td class='step-details'>
+						store selected successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023055904.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023055904.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023055904.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:59:14 PM</td>
+				<td class='step-details'>
+						Items added to cart successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023055913.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023055913.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023055913.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:59:20 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateGuestUser_Pickup_AddMoreFood_Button.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateGuestUser_Pickup_AddMoreFood_Button.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateGuestUser_Pickup_AddMoreFood_Button.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='49'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidateBanners</span>
+						<span class='test-time'>Sep 29, 2023 05:59:30 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 05:59:30 PM</span>
+	<span class='label end-time'>Sep 29, 2023 05:59:30 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:59:30 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateBanners.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateBanners.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateBanners.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='50'>
+					<div class='test-heading'>
+						<span class='test-name'>Validate_Guest_User_PickUp_Future_Ordering_ByCard</span>
+						<span class='test-time'>Sep 29, 2023 05:59:41 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 05:59:41 PM</span>
+	<span class='label end-time'>Sep 29, 2023 06:00:03 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 22s+584ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:59:50 PM</td>
+				<td class='step-details'>
+						store selected successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023055949.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023055949.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023055949.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>5:59:57 PM</td>
+				<td class='step-details'>
+						Future date Selected successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023055955.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023055955.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023055955.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:00:00 PM</td>
+				<td class='step-details'>
+						Items added to cart successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060000.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060000.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060000.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:00:03 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\Validate_Guest_User_PickUp_Future_Ordering_ByCard.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\Validate_Guest_User_PickUp_Future_Ordering_ByCard.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\Validate_Guest_User_PickUp_Future_Ordering_ByCard.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='51'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidateRegisteredUser_Pickup_Future_Ordering_ByCash</span>
+						<span class='test-time'>Sep 29, 2023 06:00:12 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 06:00:12 PM</span>
+	<span class='label end-time'>Sep 29, 2023 06:00:55 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 42s+189ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:00:23 PM</td>
+				<td class='step-details'>
+						User Logged in successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060022.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060022.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060022.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:00:35 PM</td>
+				<td class='step-details'>
+						store selected successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060035.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060035.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060035.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:00:49 PM</td>
+				<td class='step-details'>
+						Future date Selected successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060047.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060047.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060047.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:00:52 PM</td>
+				<td class='step-details'>
+						Items added to cart successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060051.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060051.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060051.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:00:55 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateRegisteredUser_Pickup_Future_Ordering_ByCash.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateRegisteredUser_Pickup_Future_Ordering_ByCash.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateRegisteredUser_Pickup_Future_Ordering_ByCash.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='52'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidateGuestUserDelivery_ByCash</span>
+						<span class='test-time'>Sep 29, 2023 06:01:05 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 06:01:05 PM</span>
+	<span class='label end-time'>Sep 29, 2023 06:01:34 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 29s+616ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:01:15 PM</td>
+				<td class='step-details'>
+						store selected successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060113.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060113.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060113.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:01:31 PM</td>
+				<td class='step-details'>
+						Items added to cart successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060131.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060131.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060131.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:01:34 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateGuestUserDelivery_ByCash.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateGuestUserDelivery_ByCash.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateGuestUserDelivery_ByCash.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='53'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidateLoginValidIdandPass</span>
+						<span class='test-time'>Sep 29, 2023 06:01:47 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 06:01:47 PM</span>
+	<span class='label end-time'>Sep 29, 2023 06:01:57 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 10s+129ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:01:57 PM</td>
+				<td class='step-details'>
+						User Logged in successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060156.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060156.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060156.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:01:57 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateLoginValidIdandPass.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateLoginValidIdandPass.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateLoginValidIdandPass.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='54'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidateRegisteredUserDeliveryStoreSelection</span>
+						<span class='test-time'>Sep 29, 2023 06:02:08 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 06:02:08 PM</span>
+	<span class='label end-time'>Sep 29, 2023 06:02:26 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 18s+224ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:02:18 PM</td>
+				<td class='step-details'>
+						User Logged in successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060217.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060217.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060217.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:02:26 PM</td>
+				<td class='step-details'>
+						store selected successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060226.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060226.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060226.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:02:26 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateRegisteredUserDeliveryStoreSelection.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateRegisteredUserDeliveryStoreSelection.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateRegisteredUserDeliveryStoreSelection.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='55'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidateGuestUserPickup_ByCard</span>
+						<span class='test-time'>Sep 29, 2023 06:02:36 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 06:02:36 PM</span>
+	<span class='label end-time'>Sep 29, 2023 06:03:01 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 25s+117ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:02:42 PM</td>
+				<td class='step-details'>
+						store selected successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060241.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060241.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060241.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:02:50 PM</td>
+				<td class='step-details'>
+						Items added to cart successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060250.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060250.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060250.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:03:01 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateGuestUserPickup_ByCard.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateGuestUserPickup_ByCard.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateGuestUserPickup_ByCard.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='56'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidateRegisteredUser_Pickup_AddMoreFood_Button</span>
+						<span class='test-time'>Sep 29, 2023 06:03:11 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 06:03:11 PM</span>
+	<span class='label end-time'>Sep 29, 2023 06:03:58 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 47s+296ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:03:21 PM</td>
+				<td class='step-details'>
+						User Logged in successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060320.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060320.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060320.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:03:34 PM</td>
+				<td class='step-details'>
+						store selected successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060333.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060333.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060333.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:03:53 PM</td>
+				<td class='step-details'>
+						Items added to cart successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060352.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060352.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060352.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:03:58 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateRegisteredUser_Pickup_AddMoreFood_Button.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateRegisteredUser_Pickup_AddMoreFood_Button.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateRegisteredUser_Pickup_AddMoreFood_Button.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='57'>
+					<div class='test-heading'>
+						<span class='test-name'>ClickfavouriteOrders</span>
+						<span class='test-time'>Sep 29, 2023 06:04:08 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 06:04:08 PM</span>
+	<span class='label end-time'>Sep 29, 2023 06:04:21 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 13s+81ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:04:19 PM</td>
+				<td class='step-details'>
+						User Logged in successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060418.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060418.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060418.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:04:21 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ClickfavouriteOrders.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ClickfavouriteOrders.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ClickfavouriteOrders.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='58'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidateLanguageChange</span>
+						<span class='test-time'>Sep 29, 2023 06:04:31 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 06:04:31 PM</span>
+	<span class='label end-time'>Sep 29, 2023 06:04:41 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 10s+155ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:04:41 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateLanguageChange.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateLanguageChange.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateLanguageChange.png'></li>
+						</ul>
+					</div>
+				</li>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='59'>
+					<div class='test-heading'>
+						<span class='test-name'>ValidateRegisteredUser_Delivery_Future_Ordering_ByCard</span>
+						<span class='test-time'>Sep 29, 2023 06:04:51 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Sep 29, 2023 06:04:51 PM</span>
+	<span class='label end-time'>Sep 29, 2023 06:05:31 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 39s+608ms</span>
+</div>
+<div class='test-steps'>
+	<table class='bordered table-results'>
+		<thead>
+			<tr>
+				<th>Status</th>
+				<th>Timestamp</th>
+				<th>Details</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:05:01 PM</td>
+				<td class='step-details'>
+						User Logged in successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060500.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060500.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060500.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:05:11 PM</td>
+				<td class='step-details'>
+						store selected successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060510.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060510.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060510.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:05:27 PM</td>
+				<td class='step-details'>
+						Future date Selected successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060525.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060525.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060525.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:05:30 PM</td>
+				<td class='step-details'>
+						Items added to cart successfully
+					<img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060530.png.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060530.png.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\29092023060530.png.png'>
+				</td>
+			</tr>
+			<tr class='log' status='pass'>
+				<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+				<td class='timestamp'>6:05:31 PM</td>
+				<td class='step-details'>
+						Test is passed
+					
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+						<ul class='screenshots'>
+							<li><img class='r-img' onerror='this.style.display="none"' data-featherlight='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateRegisteredUser_Delivery_Future_Ordering_ByCard.png' src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateRegisteredUser_Delivery_Future_Ordering_ByCard.png' data-src='C:\Users\2123004\OneDrive - Cognizant\Documents\automation kfc\KFC_Canada_OLO_PROD\Scrshot\ValidateRegisteredUser_Delivery_Future_Ordering_ByCard.png'></li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<div id='step-filters' class="right sr-filters">
+				<a class="btn-floating waves-effect waves-light green" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></a>
+				<a class="btn-floating waves-effect waves-light red" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light red darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></a>
+				<a class="btn-floating waves-effect waves-light pink text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></a>
+				<a class="btn-floating waves-effect waves-light orange" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></a>
+				<a class="btn-floating waves-effect waves-light teal" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></a>
+				<a class="btn-floating waves-effect waves-light grey" status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></a>
+			</div>
+			<h5 class='test-name'></h5>
+		</div>
+	</div>
+	<!-- subview right -->
+</div>
+<!-- test view --><!-- category view --><div id='exception-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='exception-collection' class='exception-collection'>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>org.openqa.selenium.ElementNotInteractableException</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Sep 29, 2023 05:27:17 PM</td>
+										<td class='linked' test-id='11'>ValidateGuestUserDeliveryStoreSelection</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=115.0.5790.99)
+Build info: version: '4.6.0', revision: '79f1c02ae20'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [34780280e8e44212d78639549f13d388, clickElement {id=81315A50639ECBF3104E915675DB522E_element_46}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 115.0.5790.99, chrome: {chromedriverVersion: 114.0.5735.90 (386bc09e8f4f..., userDataDir: C:\windows\SystemTemp\scope...}, goog:chromeOptions: {debuggerAddress: localhost:51573}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51573/devtoo..., se:cdpVersion: 115.0.5790.99, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (34780280e8e44212d78639549f13d388)] -> css selector: input#delivery-submit]
+Session ID: 34780280e8e44212d78639549f13d388
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:541)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at jdk.internal.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
+	at pages.HomePage.SelectDeliveryLocation(HomePage.java:205)
+	at testcases.GuestUserDeliveryStoreSelection.ValidateGuestUserDeliveryStoreSelection(GuestUserDeliveryStoreSelection.java:9)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:324)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:74)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:123)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:456)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:169)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:595)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:581)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='exception-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- exception view --><div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>59</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>0</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Sep 29, 2023 05:20:13 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Sep 29, 2023 06:05:33 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>0h 45m 20s+60ms</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel dashboard-environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>OS</td>
+								<td>Windows 11</td>
+							</tr>
+							<tr>
+								<td>Tester</td>
+								<td>QA Team Canada</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->		</div>
+		<!-- container -->
+		<script>
+			var statusGroup = {
+                parentCount: 59,
+				passParent: 58,
+				failParent: 1,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 1,
+				childCount: 0,
+				passChild: 0,
+				failChild: 0,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 0,
+				debugChild: 0,
+				exceptionsChild: 0,
+				grandChildCount: 0,
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				debugGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		<script>
+			var timeline = {
+			        "ValidateRegisteredUser_Delivery_Future_Ordering_ByCash":49.799,"ValidateInvalid_Coupon":29.348,"ClickPreviousOrder":27.336,"ValidateCoupons_Above_10":35.44,"ValidatePlusAndMinusInCartPageTest":74.3,"validateLoginInvalidIdandPass":11.743,"ValidateBehindTheBucket_ByGuestUser":8.731,"ValidateCoupons":39.571,"ClicksavedAddesses":13.505,"Validate_GuestUser_Delivery_AddMoreFood_Button":25.382,"ValidateGuestUserDeliveryStoreSelection":22.376,"ValidateBehindTheBucket_ByRegisteredUser":18.065,"ValidateRegisteredUserPickupStoreSelection":35.126,"ValidateRegisteredUserDelivery_ByCard":36.145,"Validate_RegisteredUser_Delivery_AddMoreFood_Button":38.48,"ClickDeleteAccount":12.884,"validateForgetYourPassword":11.692,"ValidateRegisteredUser_Pickup_Future_Ordering_ByCard":41.804,"ValidateCheckoutTest":34.93,"ClickfavouriteItems":9.394,"EnterInValidCardDetails":17.171,"validateLoginInvalidIdValidPass":11.461,"ValidateGuest_User_Delivery_Future_Ordering_ByCash":21.683,"ValidateHeaderlinks":107.158,"validateLoginValidIdInvalidPass":13.335,"ValidateSignout":13.46,"ValidateRegistermail":10.446,"ValidateHeaderLinksForRegisterUser":99.35,"EnterInValidCardDetails":18.16,"Click_SavedContactDetails":12.731,"ValidateGuestUserPickupStoreSelection":10.53,"ValidateRegisteredUserDelivery_ByCash":37.729,"ValidateRegisteredUserPickup_ByCard":35.928,"ValidateGuest_User_Delivery_Future_Ordering_ByCard":21.478,"ValidateFooterlinks":226.59,"Validate_Guest_User_PickUp_Future_Ordering_ByCash":33.509,"validateAccountLockout":37.947,"ValidateGuestUserDelivery_ByCard":32.671,"ValidatePlusAndMinusInCartPageTest":77.263,"Click_ResetPswd":20.42,"ValidateGuestUserPickup_ByCash":18.41,"Click_PaymentDetails":23.968,"ValidateFooterlinks":275.175,"ValidateRegisteredUserPickup_ByCash":54.439,"ValidateRegistermail":13.164,"ValidateNonRegisteredmail":14.017,"ValidateFindAKFC":9.233,"ValidateGuestUser_Pickup_AddMoreFood_Button":21.881,"ValidateBanners":0,"Validate_Guest_User_PickUp_Future_Ordering_ByCard":22.584,"ValidateRegisteredUser_Pickup_Future_Ordering_ByCash":42.189,"ValidateGuestUserDelivery_ByCash":29.616,"ValidateLoginValidIdandPass":10.129,"ValidateRegisteredUserDeliveryStoreSelection":18.224,"ValidateGuestUserPickup_ByCard":25.117,"ValidateRegisteredUser_Pickup_AddMoreFood_Button":47.296,"ClickfavouriteOrders":13.081,"ValidateLanguageChange":10.155,"ValidateRegisteredUser_Delivery_Future_Ordering_ByCard":39.608
+			};
+		</script>
+		<script src='https://cdn.rawgit.com/extent-framework/extent-github-cdn/b65cd69/v3html/js/extent.js' type='text/javascript'></script>
+		<script type='text/javascript'>
+		</script>
+	</body>
+</html>
