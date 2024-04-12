@@ -4,7 +4,7 @@
   uses: hoatruongdev09/extract-zip@v1.2
   with:
     # zip file path
-    input-path: main/
+    input-path: 
     # extract folder path
-    output-path: main/
+    output-path:
           
