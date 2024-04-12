@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="extentlisteners.Listeners"></listener>
+	</listeners>
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="testcases.RegisteredUser_Delivery_Future_Ordering_ByCash"/>
+      <class name="testcases.Invalid_Coupon"/>
+      <class name="testcases.MA_PreviousOrder"/>
+      <class name="testcases.Coupon_Above_10"/>
+      <class name="testcases.ValidatePlusAndMinus_ByRegisteredUser"/>
+      <class name="testcases.loginInvalidIdandPass"/>
+      <class name="testcases.BehindTheBucket_ByGuestUser"/>
+      <class name="testcases.CouponValidation"/>
+      <class name="testcases.MA_SavedAddesses"/>
+      <class name="testcases.GuestUser_Delivery_AddMoreFood_Button"/>
+      <class name="testcases.GuestUserDeliveryStoreSelection"/>
+      <class name="testcases.BehindTheBucket_ByRegisteredUser"/>
+      <class name="testcases.RegisteredUserPickupStoreSelection"/>
+      <class name="testcases.RegisteredUserDelivery_ByCard"/>
+      <class name="testcases.RegisteredUser_Delivery_AddMoreFood_Button"/>
+      <class name="testcases.MA_DeleteAccount"/>
+      <class name="testcases.ForgetYourPassword"/>
+      <class name="testcases.RegisteredUser_Pickup_Future_Ordering_ByCard"/>
+      <class name="testcases.ValidateCheckout"/>
+      <class name="testcases.MA_favouriteItems"/>
+      <class name="testcases.IncorrectCarddetailsValidation_ByRegisteredUser"/>
+      <class name="testcases.loginInvalidIdValidPass"/>
+      <class name="testcases.Guest_User_Delivery_Future_Ordering_ByCash"/>
+      <class name="testcases.HeaderlinkValidation"/>
+      <class name="testcases.loginValidIdInvalidPass"/>
+      <class name="testcases.MA_ValidateSignout"/>
+      <class name="testcases.ValidateCreateAccountWithVIP"/>
+      <class name="testcases.HeaderLinksForRegisterUserValidations"/>
+      <class name="testcases.IncorrectCarddetailsValidation"/>
+      <class name="testcases.MA_SavedContactDetails"/>
+      <class name="testcases.GuestUserPickupStoreSelection"/>
+      <class name="testcases.RegisteredUserDelivery_ByCash"/>
+      <class name="testcases.RegisteredUserPickup_ByCard"/>
+      <class name="testcases.Guest_User_Delivery_Future_Ordering_ByCard"/>
+      <class name="testcases.FooterlinkValidation_ByGuestUser"/>
+      <class name="testcases.Guest_User_PickUp_Future_Ordering_ByCash"/>
+      <class name="testcases.AccountLockout"/>
+      <class name="testcases.GuestUserDelivery_ByCard"/>
+      <class name="testcases.ValidatePlusAndMinusInCartPage"/>
+      <class name="testcases.MA_ResetPswd"/>
+      <class name="testcases.GuestUserPickup_ByCash"/>
+      <class name="testcases.MA_PaymentDetails"/>
+      <class name="testcases.FooterlinkValidation_ByRegisteredUser"/>
+      <class name="testcases.RegisteredUserPickup_ByCash"/>
+      <class name="testcases.ValidateCreateAccountTC2"/>
+      <class name="testcases.ValidateCreateAccountTC1"/>
+      <class name="testcases.FindAKFCValidation_ByGuestUser"/>
+      <class name="testcases.GuestUser_Pickup_AddMoreFood_Button"/>
+      <class name="testcases.BannerValidation"/>
+      <class name="testcases.Guest_User_PickUp_Future_Ordering_ByCard"/>
+      <class name="testcases.RegisteredUser_Pickup_Future_Ordering_ByCash"/>
+      <class name="testcases.GuestUserDelivery_ByCash"/>
+      <class name="testcases.LoginValidIdandPass"/>
+      <class name="testcases.RegisteredUserDeliveryStoreSelection"/>
+      <class name="testcases.GuestUserPickup_ByCard"/>
+      <class name="testcases.RegisteredUser_Pickup_AddMoreFood_Button"/>
+      <class name="testcases.MA_favouriteOrders"/>
+      <class name="testcases.LanguageChange"/>
+      <class name="testcases.RegisteredUser_Delivery_Future_Ordering_ByCard"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
